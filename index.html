@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decentralized Content Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Decentralized Content Platform</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">View NFTs</a></li>
+                <li><a href="#">Buy/Sell</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Mint Section -->
+        <section id="mint-section" class="box">
+            <h2>Mint Your NFT</h2>
+            <form id="mint-form">
+                <label for="creator-name">Creator Name:</label>
+                <input type="text" id="creator-name" required><br><br>
+                
+                <label for="description">Description:</label>
+                <textarea id="description" required></textarea><br><br>
+                
+                <label for="image-upload">Upload Image:</label>
+                <input type="file" id="image-upload" accept="image/*" required><br><br>
+                
+                <button type="submit">Mint NFT</button>
+            </form>
+        </section>
+
+        <!-- Loan System -->
+        <section id="loan-system" class="box">
+            <h2>Fake Loan System</h2>
+            <p>Request a loan on your NFTs. (Fake Implementation)</p>
+            <button id="loan-request-btn">Request Loan</button>
+        </section>
+
+        <!-- Storage System -->
+        <section id="storage-system" class="box">
+            <h2>10GB Free Storage</h2>
+            <p>You have 10GB of free storage available. (Fake Implementation)</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Decentralized Content Platform</p>
+    </footer>
+
+    <!-- Include TronWeb from Cloudflare CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tronweb/2.12.1/TronWeb.min.js"></script>
+
+    <!-- Initialize app.js only after TronWeb is fully loaded -->
+    <script>
+        window.addEventListener('load', function() {
+            console.log('TronWeb script loaded. Now loading app.js...');
+            const script = document.createElement('script');
+            script.src = 'app.js';  // Path to your app.js file
+            document.body.appendChild(script);
+        });
+    </script>
+</body>
+</html>
